@@ -1,4 +1,4 @@
-ros_bb_dc_motors
+bb_dc_motors
 ==================
 
 ROS package that launches a node to control a DC motor connected to the BeagleBone. The dc motors are controlled using the 
