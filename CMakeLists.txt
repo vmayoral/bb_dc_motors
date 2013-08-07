@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ros_bb_dc_motors)
+project(bb_dc_motors)
 
 find_package(catkin REQUIRED COMPONENTS rospy std_msgs)
 
