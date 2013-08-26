@@ -33,7 +33,8 @@ namespace cPWM {
             int duty;
             int period;
             int freq_Hz;
-            enum cPWM::Polarity polarity;
+            //enum cPWM::Polarity polarity;
+            int polarity;
             int run;
 
             std::ofstream sysfsfid_duty_ns;
@@ -47,7 +48,7 @@ namespace cPWM {
 
         public:
 
-            cPWM(std::stringstream pwm_name);
+            cPWM(std::string pwm_name);
             virtual ~cPWM();
 
             void Duty_ns(unsigned int nanoseconds);
@@ -56,7 +57,8 @@ namespace cPWM {
             void Period_ns(unsigned int nanoseconds);
             void Period_freq(unsigned int freq_Hz);
 
-            void Polarity(cPWM::Polarity polarity);
+            //void Polarity(cPWM::Polarity polarity);
+            void Polarity(int polarity);
             void Run();
             void Stop();
     };

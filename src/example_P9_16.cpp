@@ -15,15 +15,15 @@ int main()
     //      echo am33xx_pwm     > $SLOTS
     //      echo bone_pwm_P9_16 > $SLOTS 
 
+    string aux = "pwm_test_P9_16.9";
 	cPWM::cPWM* a;
-    a = new cPWM::cPWM("pwm_test_P9_16.9");
+    a = new cPWM::cPWM(aux);
 
-	a->Period(20000000);
-	a->Duty(  1000000);
+	a->Period_ns(200000);
+	a->Duty_ns(  100000);
 	a->Polarity(1);
 	a->Run();
 	usleep(100000);	//pausa de 0.1s=100,000us
-	a->DutyA( 1500000);
 	a->Stop();
 	return 0;
 }

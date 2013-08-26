@@ -5,6 +5,7 @@
 #include <stdexcept>
 #include <fstream>
 #include <sstream>
+#include <iostream>
 
 namespace cPWM {
 
@@ -23,7 +24,7 @@ namespace cPWM {
  * @return		a cPWM object
  *
  */
-cPWM::cPWM(std::stringstream pwm_name)
+cPWM::cPWM(std::string pwm_name)
 {
 	///TODO: 	Add clock selection (mmap). By now you must use setPWMReg.py method
 	///FIXME:	pin mux settings should be done here? or at a highet level?
@@ -125,13 +126,13 @@ void cPWM::Period_freq(unsigned int freq_Hz)
  * @param[in]	polarity  polarity
  *
  */
-void cPWM::Polarity(Polarity polarity)
+void cPWM::Polarity(int polarity)
 {
         switch (polarity)
         {
-        case ActiveHigh:  sysfsfid_polarity << 1 << std::endl;
+        case 1:  sysfsfid_polarity << 1 << std::endl;
                           break;
-        case ActiveLow:   sysfsfid_polarity << 0 << std::endl;
+        case 0:   sysfsfid_polarity << 0 << std::endl;
                           break;
         }
         cPWM::polarity = polarity;
