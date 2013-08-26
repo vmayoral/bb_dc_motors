@@ -51,7 +51,6 @@ int main()
 		//usleep(100000);	//pausa de 0.1s=100,000us
 		a[i]->RunB();
 		//usleep(100000);	//pausa de 0.1s=100,000us
-
 	}
 	usleep(10000000);
 	for (int i=0; i<3; i++)
@@ -60,8 +59,6 @@ int main()
 		a[i]->StopB();
 		//usleep(100000);	//pausa de 0.1s=100,000us
 	}
-
 	return 0;
-
 }
 
