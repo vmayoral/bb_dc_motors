@@ -7,11 +7,16 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello Beagle!" << endl;
+	cout << "Hello PWM on pin P9_16!" << endl;
 
     // assuming that the clock and the pinmux is already done
+    // how to:
+    //      SLOTS=/sys/devices/bone_capemgr.*/slots
+    //      echo am33xx_pwm     > $SLOTS
+    //      echo bone_pwm_P9_16 > $SLOTS 
+
 	cPWM::cPWM* a;
-    a = new cPWM::cPWM("pwm_test_P9_16.10");
+    a = new cPWM::cPWM("pwm_test_P9_16.9");
 
 	a->Period(20000000);
 	a->Duty(  1000000);
