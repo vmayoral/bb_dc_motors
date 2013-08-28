@@ -26,7 +26,7 @@ python setup.py install
 -----
 
 
-####dc_motors
+####[dc_motors](https://github.com/vmayoral/bb_dc_motors/blob/master/scripts/dc-motors.py)
 ROS node that reads the IMU values and modulates the motor speed using PWM according to the x-axis values of the IMU. It uses Beaglebone's EHRPWM pins P9_42 and P9_28.
 
 #####Subscribed topics
