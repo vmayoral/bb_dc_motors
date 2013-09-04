@@ -3,6 +3,8 @@ bb_dc_motors
 
 ROS package that launches a node to control a DC motor connected to the BeagleBone.
 
+<img src="https://raw.github.com/vmayoral/beagle-ros/master/docs/images/bb_dc_motors_bb.png" width="500px" />
+
 Examples are provided both in python and C++: 
 * The python file [dc-motors.py](https://github.com/vmayoral/bb_dc_motors/blob/master/scripts/dc-motors.py) launches a ROS node that reads from the topic **imu_euler** and controls the velocity of the motors with the x value of the **imu_euler** readings. The python code uses the 
 [Adafruit's BeagleBone IO Python Library](https://github.com/adafruit/adafruit-beaglebone-io-python.git).
@@ -11,7 +13,7 @@ Examples are provided both in python and C++:
 
 -----
 
-###HOW-TO Install the Adafruit's BB IO Python Library in the BeagleBone (using Angstrom)
+####HOW-TO Install the Adafruit's BB IO Python Library in the BeagleBone (using Angstrom)
 There's a conflict with python-nose that conflicts with the *Easiest* method of installation so if you want to get it in the BeagleBone and you are using Angstrom use the following instructions (the Manual method provided):
 
 ```Shell
